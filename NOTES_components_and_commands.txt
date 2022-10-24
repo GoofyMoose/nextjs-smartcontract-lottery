@@ -1,0 +1,25 @@
+Execute: yarn create next-app .
+Create .prettierrc and execute: yarn add --dev prettier
+Execute: yarn add web3uikit (see: https://web3ui.github.io/web3uikit/) ==> thew an error
+Execute: yarn add  @web3uikit/core @web3uikit/web3 @web3uikit/icons
+Note: May have to stop and re-start node.
+
+Install tailwind CSS (https://tailwindcss.com/docs/installation): 
+    yarn add --dev tailwindcss postcss autoprefixer
+    yarn tailwindcss init -p
+Add the paths (see documentation) to tailwind.config.js
+Modify file 'styles>globals.css' as per documentation
+Install 'PostCSS Language Support' plugin
+Install 'Tailwind SS IntelliSense' extension
+
+Start backend node: cd into WSL backend directory (hardhat-smartcontract-lottery) and execute 'hh node'
+Start frontend node: cd into WSL frontend directory (nextjs-smartcontract-lottery) and execute 'yarn dev'
+
+Run mock Chainlink keeper and pick a winner:
+yarn hardhat run ./scripts/mockOffchain.js --network localhost
+
+Deploy front-end:
+run: yarn build
+run: yarn next export
+import folder 'out' into ipfs
+pin to local node

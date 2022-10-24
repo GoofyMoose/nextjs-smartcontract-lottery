@@ -1,0 +1,11 @@
+// jsconfig.json at project root
+// helps with auto-import. Source: https://dev.to/shanesc/how-to-get-javascript-auto-import-suggestions-working-in-vs-code-aig
+
+{
+    "compilerOptions": {
+        "module": "ES6",
+        "jsx": "preserve",
+        "checkJs": true
+    },
+    "exclude": ["node_modules", "**/node_modules/*"]
+}
